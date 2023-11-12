@@ -1,4 +1,4 @@
-name: "OpenFaaS"
+name: "OpenFaaS Examples"
 on:
   schedule:
     - cron: "0 2 * * *"
