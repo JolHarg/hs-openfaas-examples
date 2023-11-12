@@ -36,3 +36,14 @@ executable openfaas-examples
     hs-source-dirs:   src
     default-language: GHC2021
     default-extensions:  DerivingStrategies, UnicodeSyntax, ImportQualifiedPost
+
+test-suite openfaas-test
+    import:           warnings
+    default-language: GHC2021
+    default-extensions:  DerivingStrategies, UnicodeSyntax, ImportQualifiedPost
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    build-depends:
+        base >= 4.17.0.0,
+        openfaas-examples
