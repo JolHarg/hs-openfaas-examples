@@ -1,0 +1,6 @@
+{
+    "name": "openfaas-examples-debug",
+    "version": "1.0.0",
+    "description": "openfaas-examples-debug",
+    "main": "debug.js"
+}
