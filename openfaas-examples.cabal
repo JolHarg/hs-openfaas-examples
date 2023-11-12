@@ -48,4 +48,6 @@ test-suite openfaas-test
         base >= 4.17.0.0
       , openfaas-examples
       , hspec
-    build-tool-depends: hspec-discover:hspec-discover
+      , QuickCheck
+    other-modules:
+        
