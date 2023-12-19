@@ -2,5 +2,8 @@
     "name": "openfaas-examples-debug",
     "version": "1.0.0",
     "description": "openfaas-examples-debug",
-    "main": "debug.js"
+    "main": "debug.js",
+    "dependencies": {
+        "@snyk/protect": "^1.1264.0"
+    }
 }
