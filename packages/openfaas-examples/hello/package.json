@@ -2,5 +2,8 @@
     "name": "openfaas-examples-hello",
     "version": "1.0.0",
     "description": "openfaas-examples-hello",
-    "main": "hello.js"
+    "main": "hello.js",
+    "dependencies": {
+        "@snyk/protect": "^1.1264.0"
+    }
 }
