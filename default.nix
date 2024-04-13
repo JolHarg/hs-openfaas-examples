@@ -23,7 +23,7 @@ let
       }) {};
       # Tests for aeson don't work because they should be run as host
       # "Couldn't find a target code interpreter. Try with -fexternal-interpreter"
-      aeson = lib.dontCheck super.aeson;
+      aeson = if builtins.currentSystem == "x86_64-linux" then super.aeson else lib.dontCheck super.aeson;
     };
    };
   shell = myHaskellPackages.shellFor {
