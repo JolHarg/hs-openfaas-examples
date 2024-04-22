@@ -19,7 +19,7 @@ let
         owner = "JolHarg";
         repo = "hs-openfaas";
         rev = "b87f688f8fb3d8579c03979ab007db52947fd01e";
-        sha256 = "CByWMoFukvUeUu1bPF6Qzh5wP92t+7pUS4VoueOGtKE=";
+        sha256 = "T7+/uNRnbHm1uKrHUrl1IqDwIr+8a/2WjC0/brkVQPo=";
       }) {};
       # Tests for aeson don't work because they should be run as host
       # "Couldn't find a target code interpreter. Try with -fexternal-interpreter"
