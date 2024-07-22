@@ -81,8 +81,7 @@ let
     ]);
     withHoogle = false;
   };
-  exe = lib.justStaticExecutables (myHaskellPackages.openfaas-examples);
-in
+  in
 {
   inherit shell;
   openfaas-examples = lib.justStaticExecutables (myHaskellPackages.openfaas-examples);
