@@ -16,7 +16,7 @@ library
   exposed-modules:    MyHandler
   build-depends:
     , aeson
-    , base        >=4.19.1.0
+    , base        >=4.20.0.0
     , bytestring
     , containers
     , openfaas
@@ -34,7 +34,7 @@ executable openfaas-examples
   main-is:            Main.hs
   build-depends:
     , aeson
-    , base               >=4.19.1.0
+    , base               >=4.20.0.0
     , bytestring
     , openfaas
     , openfaas-examples
@@ -53,14 +53,13 @@ test-suite openfaas-test
     DerivingStrategies
     ImportQualifiedPost
     UnicodeSyntax
-
   type:               exitcode-stdio-1.0
   hs-source-dirs:     test
   main-is:            Spec.hs
   build-depends:
-    , base               >=4.19.1.0
+    , base               >=4.20.0.0
     , hspec
     , openfaas-examples
     , QuickCheck
-
   other-modules:
+  build-tool-depends: hspec-discover:hspec-discover

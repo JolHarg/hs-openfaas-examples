@@ -4,7 +4,7 @@
     nixpkgs = nixpkgs;
     compiler = compiler;
   },
-  compiler ? "ghc98"
+  compiler ? "ghc910"
 }:
 let
   pkgsForX86 = if builtins.currentSystem == "x86_64-linux" then nixpkgs else nixpkgs.pkgsCross.gnu64.pkgsBuildHost;
@@ -18,8 +18,8 @@ let
       openfaas = self.callCabal2nix "openfaas" (nixpkgs.fetchFromGitHub {
         owner = "JolHarg";
         repo = "hs-openfaas";
-        rev = "692d4732ad71a26f250f33151ef143276c519b99";
-        sha256 = "OK1cFV0KfCC2+cp1iB5jsRixbsK+HsZorgi3wLtjPdw=";
+        rev = "e08fa9acc7228226f99416deee111e4b126d95c4";
+        sha256 = "2V3IO1KBDt7pKebtcZH/HgnXelxhfen7gXHlMo1ijjU=";
       }) {};
       # Tests for aeson don't work because they should be run as host
       # "Couldn't find a target code interpreter. Try with -fexternal-interpreter"
