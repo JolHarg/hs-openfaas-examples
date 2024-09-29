@@ -4,6 +4,6 @@
     "description": "openfaas-examples-debug",
     "main": "debug.js",
     "dependencies": {
-        "@snyk/protect": "^1.1292.1"
+        "@snyk/protect": "^1.1293.1"
     }
 }
