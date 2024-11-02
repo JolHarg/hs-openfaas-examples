@@ -1,7 +1,7 @@
 source-repository-package
   type: git
   location: https://github.com/JolHarg/hs-openfaas.git
-  tag: e08fa9acc7228226f99416deee111e4b126d95c4
+  tag: 11ee27955dde24e1d051d959d789408a22d18793
 
 packages: *
 

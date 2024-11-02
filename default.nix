@@ -18,8 +18,8 @@ let
       openfaas = self.callCabal2nix "openfaas" (nixpkgs.fetchFromGitHub {
         owner = "JolHarg";
         repo = "hs-openfaas";
-        rev = "e08fa9acc7228226f99416deee111e4b126d95c4";
-        sha256 = "2V3IO1KBDt7pKebtcZH/HgnXelxhfen7gXHlMo1ijjU=";
+        rev = "11ee27955dde24e1d051d959d789408a22d18793";
+        sha256 = "P3UcDUsL5mGoxlppMEgUK+1S+PsxnwMQYSf2adi+QRI=";
       }) {};
       # Tests for aeson don't work because they should be run as host
       # "Couldn't find a target code interpreter. Try with -fexternal-interpreter"

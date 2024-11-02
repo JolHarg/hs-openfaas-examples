@@ -23,10 +23,8 @@ library
     , text
 
   hs-source-dirs:     lib
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
 
 executable openfaas-examples
@@ -40,18 +38,14 @@ executable openfaas-examples
     , openfaas-examples
 
   hs-source-dirs:     src
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
 
 test-suite openfaas-test
   import:             warnings
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
   type:               exitcode-stdio-1.0
   hs-source-dirs:     test
