@@ -1,5 +1,5 @@
-{-# LANGUAGE DeriveAnyClass     #-}
-{-# LANGUAGE OverloadedLists    #-}
+{-# LANGUAGE DeriveAnyClass  #-}
+{-# LANGUAGE OverloadedLists #-}
 
 module MyHandler where
 
