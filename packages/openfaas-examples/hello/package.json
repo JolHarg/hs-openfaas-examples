@@ -4,6 +4,6 @@
     "description": "openfaas-examples-hello",
     "main": "hello.js",
     "dependencies": {
-        "@snyk/protect": "^1.1293.1"
+        "@snyk/protect": "^1.1294.0"
     }
 }
