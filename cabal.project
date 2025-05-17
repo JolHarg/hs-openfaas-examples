@@ -1,9 +1,11 @@
 source-repository-package
   type: git
   location: https://github.com/JolHarg/hs-openfaas.git
-  tag: dba4ac306637d2a61e374760e10c4eef655ae677
+  tag: 3289e8cde04326bd3385e3c5a6a0706c58bf0982
 
 packages: *
 
 -- TODO: openfaas
-allow-newer: base
+-- allow-newer: base
+-- for aeson
+allow-newer: containers
