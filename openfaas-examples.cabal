@@ -9,7 +9,9 @@ build-type:      Simple
 extra-doc-files: CHANGELOG.md
 
 common warnings
-  ghc-options: -Wall -Wwarn -threaded -rtsopts -with-rtsopts=-N -Weverything
+  if !os(wasi)
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wwarn -Weverything
     -Wno-unsafe -Wno-safe -Wno-missing-import-lists
     -Wno-missing-export-lists -Wno-implicit-prelude
     -Wno-missing-safe-haskell-mode -Wno-missing-kind-signatures
