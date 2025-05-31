@@ -9,6 +9,8 @@ build-type:      Simple
 extra-doc-files: CHANGELOG.md
 
 common warnings
+  if arch(javascript)
+    js-sources: jsbits/emcc-config.js
   if !os(wasi)
     ghc-options: -threaded -rtsopts -with-rtsopts=-N
   ghc-options: -Wall -Wwarn -Weverything
