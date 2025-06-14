@@ -1,4 +1,4 @@
-{-# LANGUAGE DeriveAnyClass  #-}
+{-# LANGUAGE DerivingVia  #-}
 {-# LANGUAGE OverloadedLists #-}
 
 module MyHandler where
@@ -14,7 +14,7 @@ data MyData = MyData {
     myInt    :: Int
 }
     deriving stock Generic
-    deriving anyclass (FromJSON, ToJSON)
+    deriving (FromJSON, ToJSON) via Generically MyData
 
 myHandler ∷ MonadIO m ⇒ Request MyData → m (Response MyData)
 myHandler Request { path = _path', Request.headers = _headers', method = _method', http = _http', args = args', ctx = _ctx' } =
