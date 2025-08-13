@@ -1,8 +1,8 @@
 {
   nixpkgs ? import <nixpkgs> {},
   haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {
-    nixpkgs = nixpkgs;
-    compiler = compiler;
+    inherit nixpkgs;
+    inherit compiler;
   },
   compiler ? "ghc912"
 }:
@@ -11,7 +11,7 @@ let
   pkgsX86 = if builtins.currentSystem == "x86_64-linux" then nixpkgs else nixpkgs.pkgsCross.gnu64.pkgsHostHost;
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
   tools = haskell-tools compiler;
-  lib = pkgsX86.haskell.lib;
+  inherit (pkgsX86.haskell) lib;
   myHaskellPackages = pkgsX86.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       openfaas-examples = lib.dontHaddock (self.callCabal2nix "openfaas-examples" (gitignore ./.) {});
@@ -32,7 +32,7 @@ let
     ];
     shellHook = ''
       gen-hie > hie.yaml
-      for i in $(find -type f | grep -v "dist-*"); do krank $i; done
+      for i in $(find . - -type f | grep -v "dist-*"); do krank $i; done
       cabal update
 
       build() {
@@ -84,5 +84,5 @@ let
   in
 {
   inherit shell;
-  openfaas-examples = lib.justStaticExecutables (myHaskellPackages.openfaas-examples);
+  openfaas-examples = lib.justStaticExecutables myHaskellPackages.openfaas-examples;
 }
