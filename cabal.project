@@ -1,11 +1,11 @@
 source-repository-package
   type: git
   location: https://github.com/JolHarg/hs-openfaas.git
-  tag: 3289e8cde04326bd3385e3c5a6a0706c58bf0982
+  tag: 64cb9cf5071d4f0391a47ebf4318293d150e0779
 
 packages: *
 
 -- TODO: openfaas
 -- allow-newer: base
 -- for aeson
-allow-newer: containers
+allow-newer: base, containers, ghc-bignum, template-haskell

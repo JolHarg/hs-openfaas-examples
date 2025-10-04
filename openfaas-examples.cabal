@@ -29,7 +29,7 @@ library
   exposed-modules:    MyHandler
   build-depends:
     , aeson       ^>=2.2.3.0
-    , base        ^>=4.21.0.0
+    , base        >=4.21.0.0 && <4.23.0.0
     , bytestring  ^>=0.12.2.0
     , containers  ^>=0.8
     , openfaas    ^>=0.2.0.0
@@ -43,7 +43,7 @@ executable openfaas-examples
   import:             warnings
   main-is:            Main.hs
   build-depends:
-    , base               ^>=4.21.0.0
+    , base               >=4.21.0.0 && <4.23.0.0
     , openfaas           ^>=0.2.0.0
     , openfaas-examples  ^>=0.2.0.0
 
@@ -65,7 +65,7 @@ test-suite openfaas-test
   hs-source-dirs:     test
   main-is:            Spec.hs
   build-depends:
-    , base               ^>=4.21.0.0
+    , base               >=4.21.0.0 && <4.23.0.0
     , hspec              ^>=2.11.12
     , openfaas-examples  ^>=0.2.0.0
     , QuickCheck         ^>=2.16.0.0

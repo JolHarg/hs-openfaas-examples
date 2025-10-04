@@ -18,7 +18,7 @@ let
       openfaas = self.callCabal2nix "openfaas" (nixpkgs.fetchFromGitHub {
         owner = "JolHarg";
         repo = "hs-openfaas";
-        rev = "3289e8cde04326bd3385e3c5a6a0706c58bf0982";
+        rev = "64cb9cf5071d4f0391a47ebf4318293d150e0779";
         sha256 = "U0rvcA+RuYtSO7tdELz9PZ1OFztpxCjMLVUl6dYFIjY=";
       }) {};
       # Tests for aeson don't work because they should be run as host
