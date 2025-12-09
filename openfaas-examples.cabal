@@ -28,11 +28,11 @@ library
   import:             warnings
   exposed-modules:    MyHandler
   build-depends:
-    , aeson       ^>=2.2.3.0
-    , base        >=4.21.0.0 && <4.23.0.0
-    , bytestring  ^>=0.12.2.0
+    , aeson       ^>=2.2.3
+    , base        >=4.21 && <4.23
+    , bytestring  ^>=0.12.2
     , containers  ^>=0.8
-    , openfaas    ^>=0.2.0.0
+    , openfaas    ^>=0.2
     , text        ^>=2.1.2
 
   hs-source-dirs:     lib
@@ -43,12 +43,12 @@ executable openfaas-examples
   import:             warnings
   main-is:            Main.hs
   build-depends:
-    , base               >=4.21.0.0 && <4.23.0.0
-    , openfaas           ^>=0.2.0.0
-    , openfaas-examples  ^>=0.2.0.0
+    , base               >=4.21 && <4.23
+    , openfaas           ^>=0.2
+    , openfaas-examples  ^>=0.2
 
-  -- , aeson              ^>=2.2.3.0
-  -- , bytestring         ^>=0.12.2.0
+  -- , aeson              ^>=2.2.3
+  -- , bytestring         ^>=0.12.2
   hs-source-dirs:     src
   default-language:   GHC2024
   default-extensions: UnicodeSyntax
@@ -65,10 +65,10 @@ test-suite openfaas-test
   hs-source-dirs:     test
   main-is:            Spec.hs
   build-depends:
-    , base               >=4.21.0.0 && <4.23.0.0
+    , base               >=4.21 && <4.23
     , hspec              ^>=2.11.12
-    , openfaas-examples  ^>=0.2.0.0
-    , QuickCheck         ^>=2.17.0.0
+    , openfaas-examples  ^>=0.2
+    , QuickCheck         ^>=2.17
 
   other-modules:
   build-tool-depends: hspec-discover:hspec-discover
