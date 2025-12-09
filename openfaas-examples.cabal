@@ -66,7 +66,7 @@ test-suite openfaas-test
   main-is:            Spec.hs
   build-depends:
     , base               >=4.21 && <4.23
-    , hspec              ^>=2.11.12
+    , hspec              ^>=2.11.15
     , openfaas-examples  ^>=0.2
     , QuickCheck         ^>=2.17
 
