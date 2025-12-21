@@ -4,7 +4,7 @@
     inherit nixpkgs;
     inherit compiler;
   },
-  compiler ? "ghc912"
+  compiler ? "ghc914"
 }:
 let
   pkgsForX86 = if builtins.currentSystem == "x86_64-linux" then nixpkgs else nixpkgs.pkgsCross.gnu64.pkgsBuildHost;
