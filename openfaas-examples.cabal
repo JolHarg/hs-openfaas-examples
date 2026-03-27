@@ -12,9 +12,6 @@ common warnings
   if arch(javascript)
     js-sources: jsbits/emcc-config.js
 
-  if !arch(wasm32)
-    ghc-options: -threaded -rtsopts -with-rtsopts=-N
-
   ghc-options:
     -Wall -Wwarn -Weverything -Wno-unsafe -Wno-safe
     -Wno-missing-import-lists -Wno-missing-export-lists
@@ -41,6 +38,8 @@ library
 
 executable openfaas-examples
   import:             warnings
+  if !arch(wasm32)
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
   main-is:            Main.hs
   build-depends:
     , base               ^>=4.22
@@ -59,16 +58,19 @@ test-suite openfaas-test
   if (arch(javascript) || arch(wasm32))
     buildable: False
 
+  if !arch(wasm32)
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+
   default-language:   GHC2024
   default-extensions: UnicodeSyntax
   type:               exitcode-stdio-1.0
   hs-source-dirs:     test
   main-is:            Spec.hs
   build-depends:
-    , base               ^>=4.22
+    -- , base               ^>=4.22
     , hspec              ^>=2.11.15
-    , openfaas-examples  ^>=0.2
-    , QuickCheck         ^>=2.17
+    -- , openfaas-examples  ^>=0.2
+    -- , QuickCheck         ^>=2.18
 
   other-modules:
   build-tool-depends: hspec-discover:hspec-discover
