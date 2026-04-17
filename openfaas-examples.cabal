@@ -27,10 +27,10 @@ library
   build-depends:
     , aeson       ^>=2.2.3
     , base        ^>=4.22
-    , bytestring  ^>=0.12.2
-    , containers  ^>=0.8
+    -- , bytestring  ^>=0.12.2
+    -- , containers  ^>=0.8
     , openfaas    ^>=0.2
-    , text        ^>=2.1.2
+    -- , text        ^>=2.1.2
 
   hs-source-dirs:     lib
   default-language:   GHC2024
