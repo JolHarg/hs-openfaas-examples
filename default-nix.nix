@@ -1,6 +1,6 @@
 {
   nixpkgs ? import <nixpkgs> {},
-  haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {
+  haskell-tools ? import (builtins.fetchTarball "https://github.com/emberdart/haskell-tools/archive/master.tar.gz") {
     inherit nixpkgs;
     inherit compiler;
   },
@@ -18,7 +18,7 @@ let
       openfaas = self.callCabal2nix "openfaas" (nixpkgs.fetchFromGitHub {
         owner = "JolHarg";
         repo = "hs-openfaas";
-        rev = "64cb9cf5071d4f0391a47ebf4318293d150e0779";
+        rev = "86151cdfc77443e67d47dac83a51bdaa402d7e85";
         sha256 = "U0rvcA+RuYtSO7tdELz9PZ1OFztpxCjMLVUl6dYFIjY=";
       }) {};
       # Tests for aeson don't work because they should be run as host
