@@ -7,8 +7,7 @@ mkShell rec {
         cabal-install
         # pkg-config
         # zlib.dev
-        # pcre.dev
-    ];
+        #     ];
     # shellHook = ''
     #     # no krank yet
     #     [[ -f $HOME/.local/bin/refactor ]] || cabal install apply-refact cabal-add cabal-fmt doctest ghci-dap ghcid ghcide haskell-debug-adapter haskell-language-server hasktags hlint hoogle hpack implicit-hie stan stylish-haskell weeder --allow-newer

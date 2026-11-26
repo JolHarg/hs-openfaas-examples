@@ -1,6 +1,6 @@
 cabal-version:   3.14
 name:            openfaas-examples
-version:         0.2.0.0
+version:         0.2
 license:         GPL-3.0-only
 license-file:    LICENSE
 author:          Ember Dart
@@ -25,7 +25,7 @@ library
   import:             warnings
   exposed-modules:    MyHandler
   build-depends:
-    , aeson       ^>=2.3.0
+    , aeson       ^>=2.3
     , base        ^>=4.22
     -- , bytestring  ^>=0.12.2
     -- , containers  ^>=0.8
@@ -46,7 +46,7 @@ executable openfaas-examples
     , openfaas           ^>=0.2
     , openfaas-examples  ^>=0.2
 
-  -- , aeson              ^>=2.3.0
+  -- , aeson              ^>=2.3
   -- , bytestring         ^>=0.12.2
   hs-source-dirs:     src
   default-language:   GHC2024
@@ -70,7 +70,7 @@ test-suite openfaas-test
     -- , base               ^>=4.22
     , hspec              ^>=2.11.15
     -- , openfaas-examples  ^>=0.2
-    -- , QuickCheck         ^>=2.18
+    -- , QuickCheck         ^>=2.19
 
   other-modules:
   build-tool-depends: hspec-discover:hspec-discover

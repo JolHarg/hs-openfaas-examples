@@ -26,8 +26,7 @@ mkShell rec {
         # krank
         # pkg-config
         zlib.dev
-        pcre.dev
-    ];
+            ];
     shellHook = ''
         cabal update >/dev/null
         set -euo pipefail
